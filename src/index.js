@@ -1,4 +1,5 @@
 import './style.css';
+import { Layer } from './Layer/script';
 
 // console.log('funguju!');
 
@@ -32,4 +33,20 @@ orderBtnElm.addEventListener('click', () => {
     orderBtnElm.textContent = 'Objednat';
     ordered = false;
   }
+});
+
+// 5.
+const drinkInfoElm = document.querySelector('#drink__info');
+
+drinkInfoElm.innerHTML += Layer({
+  color: '#feeeca',
+  label: 'mléčná pěna',
+});
+drinkInfoElm.innerHTML += Layer({
+  color: '#fed7b0',
+  label: 'teplé mléko',
+});
+drinkInfoElm.innerHTML += Layer({
+  color: '#613916',
+  label: 'espresso',
 });
