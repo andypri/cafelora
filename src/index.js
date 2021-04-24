@@ -1,5 +1,6 @@
 import './style.css';
-import { Layer } from './Layer/script';
+// import { Layer } from './Layer/script';
+import { Drink } from './Drink/script';
 
 // console.log('funguju!');
 
@@ -19,24 +20,24 @@ navItems.forEach((navItem) => {
 });
 
 // 4.
-const orderBtnElm = document.querySelector('#order-btn');
-const drinkCupElm = document.querySelector('#drink__cup');
-let ordered = false;
+// const orderBtnElm = document.querySelector('.order-btn');
+// const drinkCupElm = document.querySelector('.drink__cup');
+// let ordered = false;
 
-orderBtnElm.addEventListener('click', () => {
-  if (ordered === false) {
-    drinkCupElm.classList.add('drink__cup--selected');
-    orderBtnElm.textContent = 'Zrušit';
-    ordered = true;
-  } else {
-    drinkCupElm.classList.remove('drink__cup--selected');
-    orderBtnElm.textContent = 'Objednat';
-    ordered = false;
-  }
-});
+// orderBtnElm.addEventListener('click', () => {
+//   if (ordered === false) {
+//     drinkCupElm.classList.add('drink__cup--selected');
+//     orderBtnElm.textContent = 'Zrušit';
+//     ordered = true;
+//   } else {
+//     drinkCupElm.classList.remove('drink__cup--selected');
+//     orderBtnElm.textContent = 'Objednat';
+//     ordered = false;
+//   }
+// });
 
 // 5.
-const drinkInfoElm = document.querySelector('#drink__info');
+// const drinkInfoElm = document.querySelector('.drink__info');
 
 // drinkInfoElm.innerHTML += Layer({
 //   color: '#feeeca',
@@ -52,21 +53,42 @@ const drinkInfoElm = document.querySelector('#drink__info');
 // });
 
 // 6.
-const layers = [
-  {
-    color: '#feeeca',
-    label: 'mléčná pěna',
-  },
-  {
-    color: '#fed7b0',
-    label: 'teplé mléko',
-  },
-  {
-    color: '#613916',
-    label: 'espresso',
-  },
-];
+// const layers = [
+//   {
+//     color: '#feeeca',
+//     label: 'mléčná pěna',
+//   },
+//   {
+//     color: '#fed7b0',
+//     label: 'teplé mléko',
+//   },
+//   {
+//     color: '#613916',
+//     label: 'espresso',
+//   },
+// ];
 
-layers.forEach((layer) => {
-  drinkInfoElm.innerHTML += Layer(layer);
-});
+// layers.forEach((layer) => {
+//   drinkInfoElm.innerHTML += Layer(layer);
+// });
+
+// 7.
+const drinksListElm = document.querySelector('.drinks-list');
+
+const romano = {
+  id: 'romano',
+  name: 'Romano',
+  ordered: false,
+  layers: [
+    {
+      color: '#fbdf5b',
+      label: 'citrón',
+    },
+    {
+      color: '#613916',
+      label: 'espresso',
+    },
+  ],
+};
+
+drinksListElm.appendChild(Drink(romano));
