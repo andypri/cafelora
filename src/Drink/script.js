@@ -15,6 +15,9 @@ export const Drink = (props) => {
   const imgElm = document.createElement('img');
   imgElm.src = `/assets/cups/${props.id}.png`;
 
+  drinkCupElm.appendChild(imgElm);
+  drinkProductElm.appendChild(drinkCupElm);
+
   const drinkInfoElm = document.createElement('div');
   drinkInfoElm.classList.add('drink__info');
 
@@ -26,12 +29,16 @@ export const Drink = (props) => {
     drinkInfoElm.innerHTML += Layer(layer);
   });
 
+  drinkProductElm.appendChild(drinkInfoElm);
+
   const drinkControlsElm = document.createElement('div');
   drinkControlsElm.classList.add('drink__controls');
 
   const orderBtnElm = document.createElement('button');
   orderBtnElm.classList.add('order-btn');
   orderBtnElm.textContent = 'Objednat';
+
+  drinkControlsElm.appendChild(orderBtnElm);
 
   orderBtnElm.addEventListener('click', () => {
     if (props.ordered === false) {
@@ -46,11 +53,7 @@ export const Drink = (props) => {
   });
 
   drinkElm.appendChild(drinkProductElm);
-  drinkProductElm.appendChild(drinkCupElm);
-  drinkCupElm.appendChild(imgElm);
-  drinkProductElm.appendChild(drinkInfoElm);
   drinkElm.appendChild(drinkControlsElm);
-  drinkControlsElm.appendChild(orderBtnElm);
 
   return drinkElm;
 };
