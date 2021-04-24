@@ -75,20 +75,62 @@ navItems.forEach((navItem) => {
 // 7.
 const drinksListElm = document.querySelector('.drinks-list');
 
-const romano = {
-  id: 'romano',
-  name: 'Romano',
-  ordered: false,
-  layers: [
-    {
-      color: '#fbdf5b',
-      label: 'citrón',
-    },
-    {
-      color: '#613916',
-      label: 'espresso',
-    },
-  ],
-};
+// const romano = {
+//   id: 'romano',
+//   name: 'Romano',
+//   ordered: false,
+//   layers: [
+//     {
+//       color: '#fbdf5b',
+//       label: 'citrón',
+//     },
+//     {
+//       color: '#613916',
+//       label: 'espresso',
+//     },
+//   ],
+// };
 
-drinksListElm.appendChild(Drink(romano));
+// drinksListElm.appendChild(Drink(romano));
+
+// 8.
+const drinks = [
+  {
+    id: 'cappuccino',
+    name: 'Cappuccino',
+    ordered: false,
+    layers: [
+      {
+        color: '#feeeca',
+        label: 'mléčná pěna',
+      },
+      {
+        color: '#fed7b0',
+        label: 'teplé mléko',
+      },
+      {
+        color: '#613916',
+        label: 'espresso',
+      },
+    ],
+  },
+  {
+    id: 'romano',
+    name: 'Romano',
+    ordered: false,
+    layers: [
+      {
+        color: '#fbdf5b',
+        label: 'citrón',
+      },
+      {
+        color: '#613916',
+        label: 'espresso',
+      },
+    ],
+  },
+];
+
+drinks.forEach((drink) => {
+  drinksListElm.appendChild(Drink(drink));
+});

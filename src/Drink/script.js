@@ -57,17 +57,3 @@ export const Drink = (props) => {
 
   return drinkElm;
 };
-
-let a = `<div class="drink">
-<div class="drink__product">
-  <div id="drink__cup" class="drink__cup">
-    <img src="/assets/cups/cappuccino.png" />
-  </div>
-  <div id="drink__info" class="drink__info">
-    <h3>Cappuccino</h3>
-  </div>
-</div>
-<div class="drink__controls">
-  <button id="order-btn" class="order-btn">Objednat</button>
-</div>
-</div>`;
