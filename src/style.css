@@ -247,12 +247,13 @@ nav a:hover {
   font-size: 1.2rem;
   max-width: 40%;
   text-align: center;
-  background-color: rgba(153, 150, 150, 0.7);
+  background-image: url('./img/spots.png');
+  /* background-color: rgba(153, 150, 150, 0.7); */
   margin: auto;
   padding: 0.25rem;
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  left: 25%;
 }
 
 .contacts {
