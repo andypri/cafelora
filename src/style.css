@@ -240,6 +240,19 @@ nav a:hover {
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
+  position: relative;
+}
+
+.text__gallery {
+  font-size: 1.2rem;
+  max-width: 40%;
+  text-align: center;
+  background-color: rgba(153, 150, 150, 0.7);
+  margin: auto;
+  padding: 0.25rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 }
 
 .contacts {
